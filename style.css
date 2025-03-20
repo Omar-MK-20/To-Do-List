@@ -4,3 +4,29 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
+.container{
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(150deg, #3c86b6, #803d9b);
+    padding: 10px;
+}
+
+
+.todo-app{
+    width: 100%;
+    max-width: 500px;
+    background: #fff;
+    border-radius: 5px;
+    margin: 50px auto 20px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.inputs{
+    width: 100%;
+    max-width: 500px;
+    
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
