@@ -22,6 +22,14 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
+.todo-app h1{
+    /* font-size: 24px; */
+    color: #333;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
 .inputs{
     width: 100%;
     max-width: 500px;
