@@ -7,10 +7,9 @@
 .container{
     width: 100%;
     min-height: 100vh;
-    background: linear-gradient(150deg, #3c86b6, #803d9b);
     padding: 10px;
+    background: linear-gradient(150deg, #3c86b6, #803d9b);
 }
-
 
 .todo-app{
     width: 100%;
@@ -64,9 +63,8 @@ input{
     padding: 10px;
     font-weight: 14px;
     transition-duration: 500ms;
-    
 }
-button{
+.row button{
     border: none;
     outline: none;
     padding: 16px 50px;
@@ -77,7 +75,7 @@ button{
     border-radius: 20px;
     transition-duration: 1000ms;
 }
-button:hover{
+.row button:hover{
     background: #4d4079;
     /* font-style: bold; */
     transition-duration: 100ms;
@@ -85,12 +83,11 @@ button:hover{
 
 #message{
     position: absolute;
-    top: 180px;
+    top: 250px;
     color: red;
     font-size: 14px;
     margin-top: 10px;
 }
-
 
 .tasks{
     width: 100%;
@@ -105,7 +102,7 @@ button:hover{
     user-select: none;
 }
 
-ul li{
+.tasks ul li{
     list-style: none;
     width: 95%;
     border-radius: 20px;
@@ -114,7 +111,7 @@ ul li{
     position: relative;
 }
 
-ul li::before{
+.tasks ul li::before{
     content: '';
     position: absolute;
     left: -25px;    
@@ -127,24 +124,23 @@ ul li::before{
     background-image: url(images/uncheck-symbol-4795\ \(1\).png);
     background-size: cover;
     background-position: center;
-
 }
 
-ul li:hover{
+.tasks ul li:hover{
     background: rgb(104, 86, 164, 0.2);
     transition-duration: 600ms;
 }
 
-ul li.checked{
+.tasks ul li.checked{
     color: #6856a4;
     text-decoration: line-through;
 }
 
-ul li.checked::before{
+.tasks ul li.checked::before{
     background-image: url(images/check-symbol-4795.png);
 }
 
-ul li span{
+.tasks ul li span{
     position: absolute;
     right: -30px;
     top: 5px;
@@ -156,10 +152,165 @@ ul li span{
     text-align: center;
 }
 
-ul li span:hover{
+.tasks ul li span:hover{
     background: rgba(255, 0, 0, 0.5);
     border-radius: 50%;
     color: #fff;
     cursor: pointer;
     transition-duration: 300ms;
 }
+
+header {
+    background: rgba(0, 0, 0, 0.3); /* Background color */
+    padding: 15px 20px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 15px;
+    align-items: center;
+}
+
+nav ul li p {
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0;
+}
+
+nav ul li button {
+    padding: 8px 16px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background: #6856a4;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 300ms;
+}
+
+nav ul li button:hover {
+    background: #4d4079;
+}
+
+/* Floating Sign-In Form */
+.form-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.3s ease-in-out;
+}
+
+.form-box {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    width: 300px;
+    text-align: center;
+    position: relative;
+    transform: translateY(-50px);
+    transition: transform 0.3s ease-in-out;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 22px;
+    cursor: pointer;
+    color: red;
+}
+
+h2 {
+    margin-bottom: 15px;
+}
+
+form label {
+    display: block;
+    text-align: left;
+    font-weight: bold;
+    margin: 5px 0;
+}
+
+form input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    width: 100%;
+    padding: 10px;
+    background: #6856a4;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+form button:hover {
+    background: #4d4079;
+}
+
+/* Show form when active */
+.form-container.show {
+    visibility: visible;
+    opacity: 1;
+}
+
+.form-container.show .form-box {
+    transform: translateY(0);
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    nav ul li button {
+        width: 100%; /* Full-width button for smaller screens */
+        text-align: center;
+    }
+
+    #message{
+        position: absolute;
+        top: 275px;
+        color: red;
+        font-size: 14px;
+        margin-top: 10px;
+    }
+
+    .form-box {
+        width: 90%;
+    }
+}
+
