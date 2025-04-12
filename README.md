@@ -1,9 +1,9 @@
 # 📝 To-Do List Web Application
 
-A simple and intuitive to-do list web application that enables users to manage their daily tasks efficiently. Built using HTML, CSS, and JavaScript, it offers a seamless user experience with persistent data storage.
+Try it here 👉 [omar-mk-20.github.io/To-Do-List/](https://omar-mk-20.github.io/To-Do-List/)  
+This is a live version of the app—no installation needed!
 
-Try it here
-omar-mk-20.github.io/To-Do-List/
+A simple and intuitive to-do list web application that enables users to manage their daily tasks efficiently. Built using HTML, CSS, and JavaScript, it offers a seamless user experience with persistent data storage.
 
 ## 🌟 Features
 
